@@ -1,4 +1,33 @@
 <!DOCTYPE html><html lang="nl"><head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://domain.com/#website",
+      "url": "https://domain.com",
+      "name": "domain"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://domain.com/#org",
+      "name": "domain",
+      "url": "https://domain.com"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://domain.com/about.html",
+      "url": "https://domain.com/about.html",
+      "name": "domain",
+      "isPartOf": {
+        "@id": "https://domain.com/#website"
+      },
+      "inLanguage": "nl"
+    }
+  ]
+}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Leer meer over AutoElite - uw vertrouwde partner in de automobielindustrie. Ontdek ons verhaal, onze missie en het team dat streeft naar uitmuntendheid.">
@@ -11,26 +40,33 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
- </head>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="./header-footer.css">
+</head>
  <body>
-  <header class="l-header navbar navbar-expand-md sticky-top bg-white border-bottom">
-   <div class="container-fluid">
-    <a class="navbar-brand" href="/" aria-label="AutoPremier Nederland Home"> 
-     <div class="c-logo" style="width: 150px; height: 40px;">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 40" role="img" aria-label="AutoPremier Nederland Logo">
-       <rect x="5" y="8" width="30" height="24" rx="2" fill="#7a1f3d"></rect> <path d="M10 20 L20 12 L30 20 L20 28 Z" fill="#f4c7b8"></path> <text x="42" y="26" font-family="serif" font-size="18" font-weight="700" fill="#7a1f3d">AutoPremier</text>
-      </svg>
-     </div> 
-    </a>
-    <button class="c-nav__toggle navbar-toggler" type="button" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigatie"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="nav-menu">
-     <nav class="c-nav navbar-nav ms-auto">
-      <a class="c-nav__item nav-link" href="/" aria-current="page">Home</a> <a class="c-nav__item nav-link" href="about.html">Over Ons</a> <a class="c-nav__item nav-link" href="services.html">Diensten</a> <a class="c-nav__item nav-link" href="contact.html">Contact</a>
-     </nav>
-     <a class="btn btn-primary ms-md-3 mt-3 mt-md-0" href="contact.html">Plan Afspraak</a>
+  <header class="dr-header" aria-label="Main header">
+  <div class="dr-header-inner">
+    <div class="dr-header-brand">
+      <div class="dr-logo" aria-label="AutoPremier logo">
+        <span class="dr-logo-mark"></span>
+        <span class="dr-logo-text">AutoPremier</span>
+      </div>
     </div>
-   </div>
-  </header>
+    <button class="dr-nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="dr-nav-toggle-bar"></span>
+      <span class="dr-nav-toggle-bar"></span>
+    </button>
+    <nav class="dr-nav" aria-label="Primary navigation">
+      <ul class="dr-nav-list">
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li>
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li>
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li>
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
   <main>
    <section class="l-section py-4 py-md-5" style="scroll-margin-top: var(--header-h);">
     <div class="container">
@@ -143,7 +179,45 @@
         <p class="mb-4">"Onze industrie evolueert voortdurend, en wij evolueren mee. Van elektrische voertuigen tot geavanceerde diagnostische systemen - we omarmen innovatie terwijl we trouw blijven aan onze kernwaarden van integriteit en uitstekende service."</p>
         <p class="mb-0">"Ik wil elk teamlid bedanken dat onze missie mogelijk maakt, en elke klant die hun vertrouwen in ons stelt. Samen bouwen we aan een betere toekomst voor mobiliteit in Nederland."</p>
        </blockquote>
-       <footer class="blockquote-footer mt-3">Jeroen van der Berg, Oprichter &amp; CEO van domain</footer>
+       <footer class="dr-footer" aria-label="Site footer">
+  <div class="dr-footer-inner">
+    <div class="dr-footer-main">
+      <div class="dr-footer-brand-block">
+        <div class="dr-footer-logo" aria-label="AutoPremier logo">
+          <span class="dr-footer-logo-mark"></span>
+          <span class="dr-footer-logo-text">AutoPremier</span>
+        </div>
+        <p class="dr-footer-disclaimer">
+          The information provided on domain.com is for general informational purposes only and does not constitute professional, financial, legal, or technical advice. domain makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the content on domain.com. Any reliance you place on such information is strictly at your own risk.
+        </p>
+      </div>
+      <div class="dr-footer-nav-blocks">
+        <nav class="dr-footer-nav" aria-label="Footer main navigation">
+          <h2 class="dr-footer-heading">Navigation</h2>
+          <ul class="dr-footer-nav-list">
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./index.html">Home</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./about.html">About</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./contact.html">Contact</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./services.html">Services</a></li>
+          </ul>
+        </nav>
+        <nav class="dr-footer-legal" aria-label="Legal navigation">
+          <h2 class="dr-footer-heading">Legal</h2>
+          <ul class="dr-footer-legal-list">
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./cookie_policy.html">Cookie Policy</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./privacy.html">Privacy</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./services.html">Services</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./terms_and_conditions.html">Terms And Conditions</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./terms_of_services.html">Terms Of Services</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="dr-footer-bottom">
+      <p class="dr-footer-copy">© <span class="dr-footer-year">2024</span> domain. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
       </div>
      </div>
     </div>
@@ -370,4 +444,13 @@
   </footer>
   <script src="script.js" defer=""></script>
  
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+if (typeof AOS !== "undefined" && !window.__AOS_INITIALIZED__) {
+  AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
+  window.__AOS_INITIALIZED__ = true;
+}
+</script>
+<script src="./header-footer.js"></script>
+<script src="./consent.js"></script>
 </body></html>
